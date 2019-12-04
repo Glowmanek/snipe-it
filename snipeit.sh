@@ -234,6 +234,7 @@ set_firewall () {
   if [ "$(firewall-cmd --state)" == "running" ]; then
     echo "* Configuring firewall to allow HTTP traffic only."
     log "firewall-cmd --zone=public --add-port=http/tcp --permanent"
+    log "firewall-cmd --zone=public --add-port=https/tcp --permanent"
     log "firewall-cmd --reload"
   fi
 }
