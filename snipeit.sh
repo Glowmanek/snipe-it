@@ -202,7 +202,7 @@ install_snipeit () {
   sed -i "s|^\\(DB_DATABASE=\\).*|\\1snipeit|" "$APP_PATH/.env"
   sed -i "s|^\\(DB_USERNAME=\\).*|\\1snipeit|" "$APP_PATH/.env"
   sed -i "s|^\\(DB_PASSWORD=\\).*|\\1$mysqluserpw|" "$APP_PATH/.env"
-  sed -i "s|^\\(APP_URL=\\).*|\\1http://$fqdn|" "$APP_PATH/.env"
+  sed -i "s|^\\(APP_URL=\\).*|\\1https://$fqdn|" "$APP_PATH/.env"
 
   echo "* Installing composer."
   install_composer
